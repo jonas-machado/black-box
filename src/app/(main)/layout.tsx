@@ -1,17 +1,16 @@
 import React from "react";
 import Sidebar from "@/components/sidebar";
 import InfoBar from "@/components/infobar";
+import Navbar from "@/components/global/Navbar";
 
 type Props = { children: React.ReactNode };
 
 const Layout = (props: Props) => {
   return (
-    <div className="flex overflow-hidden h-full">
-      <Sidebar />
-      <div className="w-full">
-        <InfoBar />
-        {props.children}
-      </div>
+    <div className=" h-full">
+      <Navbar />
+
+      {props.children}
     </div>
   );
 };
